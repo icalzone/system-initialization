@@ -39,16 +39,26 @@ function Install-PowerShellModule {
 Install-Chocolatey
 
 Install-FromChocolatey 'git'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/aaronpowell/system-init/master/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/icalzone/system-initialization/master/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
-Install-FromChocolatey 'vscode-insiders'
-Install-FromChocolatey 'dotnetcore-sdk'
+Install-FromChocolatey 'firefox'
+Install-FromChocolatey 'googlechrome'
+Install-FromChocolatey 'dotnet4.7.2'
+Install-FromChocolatey 'nvm'
+Install-FromChocolatey 'nodejs'
+Install-FromChocolatey 'visualstudio2019enterprise'
+Install-FromChocolatey 'vscode'
+Install-FromChocolatey 'sql-server-2019'
+Install-FromChocolatey 'sql-server-management-studio'
+Install-FromChocolatey 'sourcetree'
+Install-FromChocolatey 'microsoftazurestorageexplorer'
+Install-FromChocolatey '7zip'
+Install-FromChocolatey 'notepadplusplus'
 Install-FromChocolatey 'microsoft-windows-terminal'
 Install-FromChocolatey 'fiddler'
 Install-FromChocolatey 'postman'
 Install-FromChocolatey 'linqpad'
-Install-FromChocolatey 'firefox'
-Install-FromChocolatey 'googlechrome'
+# Install-FromChocolatey 'wireshark'
 
 Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
 Install-PowerShellModule 'nvm' {
